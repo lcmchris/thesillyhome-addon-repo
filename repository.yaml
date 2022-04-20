@@ -1,0 +1,4 @@
+# https://developers.home-assistant.io/docs/add-ons/repository#repository-configuration
+name: Example Home Assistant add-on repository
+url: "https://github.com/lcmchris/thesillyhome/tree/master/src/routine_predictor"
+maintainer: Christopher Lai <lcmchristopher@gmail.com>

@@ -1,0 +1,32 @@
+# https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
+name: thesillyhome addon
+version: "1.0.0"
+slug: thesillyhome
+description: "thesillyhome add-on"
+url: "https://github.com/lcmchris/thesillyhome/tree/master/src/routine_predictor"
+homeassistant_api: true
+arch:
+  - armhf
+  - armv7
+  - aarch64
+  - amd64
+  - i386
+options:
+  actuactors_id:
+    - "Test_id_1"
+    - "Test_id_2"
+  sensors_id:
+    - "Test_id_1"
+    - "Test_id_2"
+  database:
+    - "Test_id_1"
+    - "Test_id_2"
+schema:
+  actuactors_id:
+    - str
+  sensors_id:
+    - str
+  database:
+    - str
+image: "lcmchris1/{arch}-thesillyhome"
+
