@@ -1,0 +1,35 @@
+name: thesillyhome addon
+version: "1.0.0"
+slug: thesillyhome
+description: "thesillyhome add-on"
+url: "https://github.com/lcmchris/thesillyhome-addon-repo"
+homeassistant_api: true
+arch:
+  - armhf
+  - armv7
+  - aarch64
+  - amd64
+  - i386
+options:
+  actuactors_id:
+    - "light.bedroom_1"
+  sensors_id:
+    - "weather.home"
+  db_options:
+    - db_password: ""
+      db_username: ""
+      db_host: ""
+      db_port: ""
+      db_database: ""
+schema:
+  actuactors_id:
+    - str
+  sensors_id:
+    - str
+  db_options:
+    - db_password: str
+      db_username: str
+      db_host: str
+      db_port: str
+      db_database: str
+# image: "ghrc.io/lcmchris/{arch}-thesillyhome"
