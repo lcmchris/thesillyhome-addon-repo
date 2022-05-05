@@ -1,4 +1,5 @@
 # Welcome to thesillyhome addon
+[![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https://github.com/lcmchris/thesillyhome-addon-repo)
 
 - This repository is an addo-on that tries to help apply ML to your homeassistance.
 - This aims to act as a proof of concept that applying ML to homeautomation works and a future with J.A.R.V.I.S is closer than we thought.
@@ -46,7 +47,7 @@ For each sensor change there is a request to predict the new states for actuator
 
 Add-on documentation: N/A
 
-[![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fhome-assistant%2Faddons-example)
+
 
 ## Feature suggestions
 
