@@ -6,6 +6,7 @@ from pandas import DataFrame
 from sklearn.tree import DecisionTreeClassifier
 from datetime import datetime
 import copy
+import os
 
 
 class ModelExecutor(hass.Hass):
@@ -20,16 +21,20 @@ class ModelExecutor(hass.Hass):
         actuators = tsh_config.actuators
         act_model_set = {}
         for act in actuators:
-            with open(
-                f"/data/model/{self.model_name_version}/{act}.pickle", "rb"
-            ) as pickle_file:
-                content = pickle.load(pickle_file)
-                act_model_set[act] = content
+            if os.path.isFile(f"/data/model/{self.model_name_version}/{act}.pickle"):
+                with open(
+                    f"/data/model/{self.model_name_version}/{act}.pickle", "rb"
+                ) as pickle_file:
+                    content = pickle.load(pickle_file)
+                    act_model_set[act] = content
+            else:
+                print(f"No model for {act}")
+                act_model_set[act] = None
         return act_model_set
 
     def state_handler(self, entity, attribute, old, new, kwargs):
         sensors = tsh_config.sensors
-        sensors_lux = [sensor for sensor in sensors if sensor.split("_")[-1]=='lux']
+        float_sensors = tsh_config.float_sensors
 
         if entity in sensors:
             self.log(f"{entity} is {new}")
@@ -45,10 +50,10 @@ class ModelExecutor(hass.Hass):
             df_sen_states = copy.deepcopy(feature_list)
             for sensor in sensors:
                 true_state = self.get_state(entity_id=sensor)
-                if sensor not in sensors_lux:
-                    if (sensor + "_" + true_state) in df_sen_states.columns:
+                if sensor not in float_sensors:
+                    if (f'{sensor}_{true_state}' in df_sen_states.columns:
                         df_sen_states[sensor + "_" + true_state] = 1
-                elif sensor in sensors_lux:
+                elif sensor in float_sensors:
                     if (true_state) in df_sen_states.columns:
                         df_sen_states[sensor] = true_state
 

@@ -32,4 +32,4 @@ schema:
       db_host: str
       db_port: str
       db_database: str
-image: "lcmchris1/{arch}-thesillyhome"
+# image: "lcmchris1/{arch}-thesillyhome"
