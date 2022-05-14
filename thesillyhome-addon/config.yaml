@@ -36,7 +36,7 @@ options:
     - device_tracker.chris_phone
     - weather.home
   db_options:
-    - db_password: XXXX
+    - db_password: XXXXXXX
       db_username: homeassistant
       db_host: 192.168.1.100
       db_port: '3306'
