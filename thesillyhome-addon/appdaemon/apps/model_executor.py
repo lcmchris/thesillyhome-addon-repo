@@ -6,14 +6,14 @@ from pandas import DataFrame
 from sklearn.tree import DecisionTreeClassifier
 from datetime import datetime
 import copy
-import os
+import os.path
 
 
 class ModelExecutor(hass.Hass):
     def initialize(self):
         self.model_name_version = tsh_config.model_name_version
-        self.handle = self.listen_state(self.state_handler)
         self.act_model_set = self.load_models()
+        self.handle = self.listen_state(self.state_handler)
         self.log("Hello from TheSillyHome")
         self.log("TheSillyHome has now started!")
 
@@ -21,7 +21,7 @@ class ModelExecutor(hass.Hass):
         actuators = tsh_config.actuators
         act_model_set = {}
         for act in actuators:
-            if os.path.isFile(f"/data/model/{self.model_name_version}/{act}.pickle"):
+            if os.path.isfile(f"/data/model/{self.model_name_version}/{act}.pickle"):
                 with open(
                     f"/data/model/{self.model_name_version}/{act}.pickle", "rb"
                 ) as pickle_file:
