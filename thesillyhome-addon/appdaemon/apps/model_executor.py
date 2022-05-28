@@ -27,9 +27,9 @@ class ModelExecutor(hass.Hass):
                 ) as pickle_file:
                     content = pickle.load(pickle_file)
                     act_model_set[act] = content
+                print(f"Loaded model for {act}")
             else:
                 print(f"No model for {act}")
-                act_model_set[act] = None
         return act_model_set
 
     def state_handler(self, entity, attribute, old, new, kwargs):
@@ -41,7 +41,9 @@ class ModelExecutor(hass.Hass):
 
             # Get feature list from parsed data header, set all columns to 0
             feature_list = pd.read_csv("/data/act_states.csv").columns
-            feature_list = feature_list.drop(["entity_id", "state"])
+            feature_list = feature_list.drop(
+                ["entity_id", "state", "last_changed", "duplicate"]
+            )
             feature_list = pd.DataFrame(columns=feature_list)
             feature_list = feature_list.append(pd.Series(), ignore_index=True)
             feature_list.iloc[0] = 0
@@ -56,7 +58,8 @@ class ModelExecutor(hass.Hass):
                 elif sensor in float_sensors:
                     if (true_state) in df_sen_states.columns:
                         df_sen_states[sensor] = true_state
-
+            print(df_sen_states)
+            print(len(df_sen_states.columns)
             # Execute all models for sensor and set states
             for act, model in self.act_model_set.items():
                 prediction = model.predict(df_sen_states)[0].split("::")[1]
