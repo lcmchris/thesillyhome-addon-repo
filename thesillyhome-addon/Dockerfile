@@ -12,11 +12,11 @@ RUN \
     py3-pandas \
     py3-scikit-learn \
     mariadb-connector-c-dev \
-    && apk del .build-dependencies
+    && pip3 install thesillyhome==0.2.4 \
+    && apk del .build-dependencies 
 
 # Copy data
 COPY rootfs /
-RUN pip3 install thesillyhome==0.2.4
 COPY appdaemon /appdaemon
 
 # # dev stuff
