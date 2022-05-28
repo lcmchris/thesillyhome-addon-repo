@@ -43,7 +43,9 @@ class ModelExecutor(hass.Hass):
             output_list = tsh_config.output_list
             feature_list = pd.read_csv("/data/act_states.csv", index=False).columns
 
-            feature_list = sorted(list(set(feature_list) - set(output_list)))
+            feature_list = sorted(
+                list(set(feature_list) - set(output_list) - set("duplicate"))
+            )
             feature_list = pd.DataFrame(columns=feature_list)
             feature_list = feature_list.append(pd.Series(), ignore_index=True)
             feature_list.iloc[0] = 0
