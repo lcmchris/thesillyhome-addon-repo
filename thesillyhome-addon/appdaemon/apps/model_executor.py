@@ -40,10 +40,10 @@ class ModelExecutor(hass.Hass):
             self.log(f"{entity} is {new}")
 
             # Get feature list from parsed data header, set all columns to 0
-            feature_list = pd.read_csv("/data/act_states.csv").columns
-            feature_list = feature_list.drop(
-                ["entity_id", "state", "last_changed", "duplicate"]
-            )
+            output_list = tsh_config.output_list
+            feature_list = pd.read_csv("/data/act_states.csv", index=False).columns
+
+            feature_list = sorted(list(set(feature_list) - set(output_list)))
             feature_list = pd.DataFrame(columns=feature_list)
             feature_list = feature_list.append(pd.Series(), ignore_index=True)
             feature_list.iloc[0] = 0
@@ -59,9 +59,18 @@ class ModelExecutor(hass.Hass):
                     if (true_state) in df_sen_states.columns:
                         df_sen_states[sensor] = true_state
             print(df_sen_states)
-            print(len(df_sen_states.columns)
+            print(len(df_sen_states.columns))
+
             # Execute all models for sensor and set states
             for act, model in self.act_model_set.items():
+                cur_act_list = []
+                for feature in list(df_sen_states.columns):
+                    if feature.startswith(act):
+                        cur_act_list.append(feature)
+                df_sen_states = df_sen_states[
+                    sorted(list(set(df_sen_states.columns) - set(cur_act_list)))
+                ]
+
                 prediction = model.predict(df_sen_states)[0].split("::")[1]
                 if prediction == "on":
                     self.log(f"Turn on {act}")
