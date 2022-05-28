@@ -6,15 +6,17 @@ RUN \
     build-base \
     libffi-dev \
     && apk add --no-cache \
-    python3-dev \
     py3-pip \
+    python3-dev \
+    py3-numpy \
+    py3-pandas \
+    py3-scikit-learn \
+    mariadb-connector-c-dev \
     && apk del .build-dependencies
-
-# RUN pip3 install thesillyhome
 
 # Copy data
 COPY rootfs /
-RUN pip3 install thesillyhome
+RUN pip3 install thesillyhome==0.2.4
 COPY appdaemon /appdaemon
 
 # # dev stuff
