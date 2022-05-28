@@ -12,7 +12,7 @@ RUN \
     py3-pandas \
     py3-scikit-learn \
     mariadb-connector-c-dev \
-    && pip3 install thesillyhome \
+    && pip3 install thesillyhome==0.2.8 \
     && pip3 install appdaemon==4.2.1 \
     && apk del .build-dependencies
 
