@@ -6,12 +6,9 @@ RUN \
     build-base \
     libffi-dev \
     && apk add --no-cache \
-    py3-pip \
     python3-dev \
-    py3-numpy \
-    py3-pandas \
-    py3-scikit-learn \
-    mariadb-connector-c-dev
+    py3-pip \
+    && apk del .build-dependencies
 
 # RUN pip3 install thesillyhome
 

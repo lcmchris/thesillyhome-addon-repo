@@ -51,7 +51,7 @@ class ModelExecutor(hass.Hass):
             for sensor in sensors:
                 true_state = self.get_state(entity_id=sensor)
                 if sensor not in float_sensors:
-                    if (f'{sensor}_{true_state}' in df_sen_states.columns:
+                    if f"{sensor}_{true_state}" in df_sen_states.columns:
                         df_sen_states[sensor + "_" + true_state] = 1
                 elif sensor in float_sensors:
                     if (true_state) in df_sen_states.columns:
