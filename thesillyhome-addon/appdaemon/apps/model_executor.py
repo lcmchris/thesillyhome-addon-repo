@@ -41,7 +41,7 @@ class ModelExecutor(hass.Hass):
 
             # Get feature list from parsed data header, set all columns to 0
             output_list = tsh_config.output_list
-            feature_list = pd.read_csv("/data/act_states.csv", index=False).columns
+            feature_list = pd.read_csv("/data/act_states.csv").columns
 
             feature_list = sorted(
                 list(set(feature_list) - set(output_list) - set("duplicate"))
