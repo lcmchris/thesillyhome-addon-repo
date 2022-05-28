@@ -13,6 +13,7 @@ RUN \
     py3-scikit-learn \
     mariadb-connector-c-dev \
     && pip3 install thesillyhome==0.2.4 \
+    && pip3 install appdaemon==4.2.1 \
     && apk del .build-dependencies 
 
 # Copy data
