@@ -1,5 +1,5 @@
 name: thesillyhome addon
-version: "1.0.2"
+version: "2.0.0"
 slug: thesillyhome
 description: "thesillyhome add-on"
 url: "https://github.com/lcmchris/thesillyhome-addon-repo"
@@ -39,7 +39,7 @@ options:
     - db_password: XXXXXXX
       db_username: homeassistant
       db_host: 192.168.1.100
-      db_port: '3306'
+      db_port: "3306"
       db_database: homeassistant
 schema:
   actuactors_id:
@@ -52,4 +52,4 @@ schema:
       db_host: str
       db_port: str
       db_database: str
-image: "lcmchris1/{arch}-thesillyhome"
+# image: "lcmchris1/{arch}-thesillyhome"

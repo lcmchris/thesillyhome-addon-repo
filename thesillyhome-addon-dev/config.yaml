@@ -1,0 +1,55 @@
+name: thesillyhome addon dev
+version: "2.0.0-dev"
+slug: thesillyhome_dev
+description: "thesillyhome add-on dev"
+url: "https://github.com/lcmchris/thesillyhome-addon-repo"
+homeassistant_api: true
+init: false
+arch:
+  - armhf
+  - armv7
+  - aarch64
+  - amd64
+  - i386
+options:
+  actuactors_id:
+    - light.bathroom_lights
+    - light.corridor_lights
+    - light.hallway_lights
+    - switch.livingroom_entrance_switch_right
+    - switch.livingroom_entrance_switch_center
+    - switch.livingroom_entrance_switch_left
+    - light.bedroom_sidetable_lamp
+    - light.bedroom_ceiling_light
+  sensors_id:
+    - sensor.corridor_end_sensor_illuminance_lux
+    - binary_sensor.corridor_end_sensor_occupancy
+    - sensor.corridor_entrance_sensor_illuminance_lux
+    - binary_sensor.corridor_entrance_sensor_occupancy
+    - sensor.livingroom_desk_sensor_illuminance_lux
+    - binary_sensor.livingroom_desk_sensor_occupancy
+    - sensor.bedroom_entrance_sensor_illuminance_lux
+    - binary_sensor.bedroom_entrance_sensor_occupancy
+    - sensor.bathroom_entrance_sensor_illuminance_lux
+    - binary_sensor.bathroom_entrance_sensor_occupancy
+    - binary_sensor.chris_phone_is_charging
+    - device_tracker.chris_phone
+    - weather.home
+  db_options:
+    - db_password: XXXXXXX
+      db_username: homeassistant
+      db_host: 192.168.1.100
+      db_port: "3306"
+      db_database: homeassistant
+schema:
+  actuactors_id:
+    - str
+  sensors_id:
+    - str
+  db_options:
+    - db_password: str
+      db_username: str
+      db_host: str
+      db_port: str
+      db_database: str
+# image: "lcmchris1/{arch}-thesillyhome"

@@ -1,8 +1,0 @@
-#!/usr/bin/with-contenv bashio
-
-bashio::log.info "Starting to parse DB data"
-python3 -m thesillyhome.model_creator.main
-
-bashio::log.info "Starting Appdaemon"
-eval "echo \"$(</appdaemon/appdaemon.yaml)\"" > /appdaemon/appdaemon.yaml
-appdaemon -c /appdaemon/

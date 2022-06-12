@@ -1,14 +1,26 @@
 {
-  "name": "Example Home Assistant add-on repository",
+  "name": "Example devcontainer for add-on repositories",
   "image": "ghcr.io/home-assistant/devcontainer:addons",
-  "appPort": ["7123:8123", "7357:4357"],
+  "appPort": [
+    "7123:8123",
+    "7357:4357"
+  ],
   "postStartCommand": "bash devcontainer_bootstrap",
-  "runArgs": ["-e", "GIT_EDITOR=code --wait", "--privileged"],
+  "runArgs": [
+    "-e",
+    "GIT_EDITOR=code --wait",
+    "--privileged"
+  ],
   "containerEnv": {
     "WORKSPACE_DIRECTORY": "${containerWorkspaceFolder}"
   },
-  "extensions": ["timonwong.shellcheck", "esbenp.prettier-vscode"],
-  "mounts": ["type=volume,target=/var/lib/docker"],
+  "extensions": [
+    "timonwong.shellcheck",
+    "esbenp.prettier-vscode"
+  ],
+  "mounts": [
+    "type=volume,target=/var/lib/docker"
+  ],
   "settings": {
     "terminal.integrated.profiles.linux": {
       "zsh": {

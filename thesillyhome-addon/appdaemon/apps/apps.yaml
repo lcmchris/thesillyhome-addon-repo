@@ -1,3 +1,0 @@
-model_executor:
-  module: model_executor
-  class: ModelExecutor
