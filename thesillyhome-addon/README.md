@@ -1,4 +1,4 @@
-# Home Assistant Add-on: Example add-on
+# Dev version Home Assistant Add-on: Example add-on
 
 _Example add-on to use as a blueprint for new add-ons._
 

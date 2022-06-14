@@ -33,7 +33,7 @@ options:
     - sensor.bathroom_entrance_sensor_illuminance_lux
     - binary_sensor.bathroom_entrance_sensor_occupancy
     - binary_sensor.chris_phone_is_charging
-    - device_tracker.chris_phone
+    - ice_tracker.chris_phone
     - weather.home
   db_options:
     - db_password: XXXXXXX
@@ -41,6 +41,7 @@ options:
       db_host: 192.168.1.100
       db_port: "3306"
       db_database: homeassistant
+      db_type: mariadb
 schema:
   actuactors_id:
     - str
@@ -52,4 +53,5 @@ schema:
       db_host: str
       db_port: str
       db_database: str
+      db_type: str
 # image: "lcmchris1/{arch}-thesillyhome"
