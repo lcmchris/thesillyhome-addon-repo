@@ -5,6 +5,8 @@ description: "thesillyhome add-on"
 url: "https://github.com/lcmchris/thesillyhome-addon-repo"
 homeassistant_api: true
 init: false
+environment:
+  HA_ADDON: "true"
 arch:
   - armhf
   - armv7
@@ -15,7 +17,6 @@ options:
   actuactors_id:
     - light.bathroom_lights
     - light.corridor_lights
-    - light.hallway_lights
     - switch.livingroom_entrance_switch_right
     - switch.livingroom_entrance_switch_center
     - switch.livingroom_entrance_switch_left
@@ -33,7 +34,7 @@ options:
     - sensor.bathroom_entrance_sensor_illuminance_lux
     - binary_sensor.bathroom_entrance_sensor_occupancy
     - binary_sensor.chris_phone_is_charging
-    - ice_tracker.chris_phone
+    - device_tracker.chris_phone
     - weather.home
   db_options:
     - db_password: XXXXXXX
