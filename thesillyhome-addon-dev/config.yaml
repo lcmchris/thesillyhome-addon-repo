@@ -1,5 +1,5 @@
 name: thesillyhome addon dev
-version: "2.0.0-dev"
+version: "2.0.1-dev"
 slug: thesillyhome_dev
 description: "thesillyhome add-on dev"
 url: "https://github.com/lcmchris/thesillyhome-addon-repo"
@@ -8,11 +8,9 @@ init: false
 environment:
   HA_ADDON: "true"
 arch:
-  - armhf
-  - armv7
-  - aarch64
   - amd64
-  - i386
+  - armv7
+  - arm64
 options:
   actuactors_id:
     - light.bathroom_lights
