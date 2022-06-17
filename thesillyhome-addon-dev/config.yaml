@@ -10,7 +10,7 @@ environment:
 arch:
   - amd64
   - armv7
-  - arm64
+  - aarch64
 options:
   actuactors_id:
     - light.bathroom_lights
