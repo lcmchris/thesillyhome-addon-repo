@@ -8,9 +8,14 @@ This is the HomeAssistant Addon setup for installing [thesillyhome-container](ht
 
 
 This repository contains the following add-ons:
-thesillyhome-addon      : Stable version of the addon
-thesillyhome-addon-dev  : Development version of the addon
 
+- thesillyhome-addon      : Stable version of the addon
+
+- thesillyhome-addon-dev  : Development version of the addon
+
+
+
+## Supported Architectures
 
 ![Supports amd64 Architecture][amd64-shield]
 ![Supports aarch64 Architecture][aarch64-shield]
