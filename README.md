@@ -1,4 +1,7 @@
 # Welcome to TheSillyHome addon
+
+See [thesillyhome-container](https://github.com/lcmchris/thesillyhome-container) for more details on the motivation, design and feature roadmap.
+
 [![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https://github.com/lcmchris/thesillyhome-addon-repo)
 
 This is the HomeAssistant Addon setup for installing [thesillyhome-container](https://github.com/lcmchris/thesillyhome-container) onto Home Assistant Operating System.
