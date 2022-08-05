@@ -1,16 +1,20 @@
 name: thesillyhome addon
-version: "2.0.1"
+version: "2.0.2"
 slug: thesillyhome
 description: "thesillyhome add-on"
 url: "https://github.com/lcmchris/thesillyhome-addon-repo"
 homeassistant_api: true
 init: false
+ports:
+  2300/tcp: 2300
+ports_description:
+  2300/tcp: "Web interface (not required for Home Assistant ingress)"
 environment:
   HA_ADDON: "true"
 arch:
   - amd64
-  - aarch64
   - armv7
+  - aarch64
 options:
   actuactors_id:
     - light.bathroom_lights
