@@ -1,5 +1,5 @@
 name: thesillyhome addon dev
-version: "2.0.3-dev"
+version: "2.0.4-dev"
 slug: thesillyhome_dev
 description: "thesillyhome add-on dev"
 url: "https://github.com/lcmchris/thesillyhome-addon-repo"
@@ -45,6 +45,8 @@ options:
       db_port: "3306"
       db_database: homeassistant
       db_type: mariadb
+  autotrain: "true"
+  autotrain_cadence: "0 0 * * 0"
 schema:
   actuactors_id:
     - str
