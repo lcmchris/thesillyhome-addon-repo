@@ -1,5 +1,5 @@
 name: thesillyhome addon
-version: "2.0.3"
+version: "2.0.4"
 slug: thesillyhome
 description: "thesillyhome add-on"
 url: "https://github.com/lcmchris/thesillyhome-addon-repo"
@@ -45,6 +45,9 @@ options:
       db_port: "3306"
       db_database: homeassistant
       db_type: mariadb
+  autotrain: true
+  autotrain_cadence: "0 0 * * 0"
+  share_data: true
 schema:
   actuactors_id:
     - str
