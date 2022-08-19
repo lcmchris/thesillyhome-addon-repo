@@ -1,1 +1,1 @@
-FROM lcmchris1/thesillyhome-container:0.0.3
+FROM lcmchris1/thesillyhome-container:0.0.4

@@ -131,6 +131,5 @@ dmypy.json
 # png & pickle & csv
 *.csv
 *.pickle
-*.png
 secrets.yaml
 thesillyhome-addon/thesillyhome/
