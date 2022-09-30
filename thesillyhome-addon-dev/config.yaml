@@ -1,5 +1,5 @@
 name: thesillyhome addon dev
-version: "2.0.7-dev"
+version: "2.0.8-dev"
 slug: thesillyhome_dev
 description: "thesillyhome add-on dev"
 url: "https://github.com/lcmchris/thesillyhome-addon-repo"
@@ -67,4 +67,4 @@ schema:
   autotrain: bool
   autotrain_cadence: str
   share_data: bool
-# image: "lcmchris1/{arch}-thesillyhome-dev"
+image: "lcmchris1/{arch}-thesillyhome-dev"
