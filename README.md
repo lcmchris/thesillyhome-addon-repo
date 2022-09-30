@@ -12,8 +12,6 @@ This is the HomeAssistant Addon setup for installing [thesillyhome-container](ht
 
 This repository contains the following add-ons:
 
-- thesillyhome-addon      : Stable version of the addon
-
 - thesillyhome-addon-dev  : Development version of the addon
 
 

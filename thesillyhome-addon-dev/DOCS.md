@@ -10,6 +10,7 @@ ML simplified of Homeassistant.
 Step 1:
 Define your sensors and lights. This currently requires the entity IDs to be listed:
 
+- Set username password
 - Set sensors
 - Set lights
 

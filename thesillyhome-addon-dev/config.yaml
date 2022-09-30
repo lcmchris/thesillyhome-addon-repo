@@ -16,6 +16,8 @@ arch:
   - armv7
   - aarch64
 options:
+  username: XXXXXXXX
+  password: XXXXXXXX
   actuactors_id:
     - light.bathroom_lights
     - light.corridor_lights
