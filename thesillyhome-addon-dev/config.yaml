@@ -5,6 +5,8 @@ description: "thesillyhome add-on dev"
 url: "https://github.com/lcmchris/thesillyhome-addon-repo"
 homeassistant_api: true
 init: false
+ingress: true
+ingress_port: 2300
 ports:
   2300/tcp: 2300
 ports_description:
