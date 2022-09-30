@@ -1,5 +1,5 @@
 name: thesillyhome addon dev
-version: "2.0.6-dev"
+version: "2.0.7-dev"
 slug: thesillyhome_dev
 description: "thesillyhome add-on dev"
 url: "https://github.com/lcmchris/thesillyhome-addon-repo"
@@ -51,6 +51,8 @@ options:
   autotrain_cadence: "0 0 * * 0"
   share_data: true
 schema:
+  username: str
+  password: str
   actuactors_id:
     - str
   sensors_id:
@@ -62,4 +64,7 @@ schema:
       db_port: str
       db_database: str
       db_type: str
-image: "lcmchris1/{arch}-thesillyhome-dev"
+  autotrain: bool
+  autotrain_cadence: str
+  share_data: bool
+# image: "lcmchris1/{arch}-thesillyhome-dev"
