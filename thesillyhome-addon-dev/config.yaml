@@ -1,5 +1,5 @@
 name: thesillyhome addon dev
-version: "2.0.8-dev"
+version: "2.0.9-dev"
 slug: thesillyhome_dev
 description: "thesillyhome add-on dev"
 url: "https://github.com/lcmchris/thesillyhome-addon-repo"
@@ -16,8 +16,8 @@ arch:
   - armv7
   - aarch64
 options:
-  username: XXXXXXXX
-  password: XXXXXXXX
+  username: null
+  password: null
   actuactors_id:
     - light.bathroom_lights
     - light.corridor_lights
