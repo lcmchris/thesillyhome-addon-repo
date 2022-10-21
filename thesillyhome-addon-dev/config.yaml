@@ -1,5 +1,5 @@
 name: thesillyhome addon dev
-version: "2.0.10-dev"
+version: "2.0.11-dev"
 slug: thesillyhome_dev
 description: "thesillyhome add-on dev"
 url: "https://github.com/lcmchris/thesillyhome-addon-repo"
@@ -50,6 +50,7 @@ options:
   autotrain: true
   autotrain_cadence: "0 0 * * 0"
   share_data: true
+  startup_disable_all: false
 schema:
   username: str
   password: str
@@ -67,4 +68,5 @@ schema:
   autotrain: bool
   autotrain_cadence: str
   share_data: bool
+  startup_disable_all: bool
 image: "lcmchris1/{arch}-thesillyhome-dev"
