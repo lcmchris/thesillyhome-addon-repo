@@ -1,5 +1,5 @@
 name: thesillyhome addon dev
-version: "2.0.11-dev"
+version: "2.0.12-dev"
 slug: thesillyhome_dev
 description: "thesillyhome add-on dev"
 url: "https://github.com/lcmchris/thesillyhome-addon-repo"
@@ -16,8 +16,6 @@ arch:
   - armv7
   - aarch64
 options:
-  username: null
-  password: null
   actuactors_id:
     - light.bathroom_lights
     - light.corridor_lights
@@ -49,11 +47,8 @@ options:
       db_type: mariadb
   autotrain: true
   autotrain_cadence: "0 0 * * 0"
-  share_data: true
   startup_disable_all: false
 schema:
-  username: str
-  password: str
   actuactors_id:
     - str
   sensors_id:
@@ -67,6 +62,5 @@ schema:
       db_type: str
   autotrain: bool
   autotrain_cadence: str
-  share_data: bool
   startup_disable_all: bool
 image: "lcmchris1/{arch}-thesillyhome-dev"
