@@ -1,5 +1,5 @@
 name: thesillyhome addon dev
-version: "2.0.12-dev"
+version: "2.0.13-dev"
 slug: thesillyhome_dev
 description: "thesillyhome add-on dev"
 url: "https://github.com/lcmchris/thesillyhome-addon-repo"
@@ -11,6 +11,8 @@ ports_description:
   2300/tcp: "Web interface (not required for Home Assistant ingress)"
 environment:
   HA_ADDON: "true"
+map:
+  - config:ro
 arch:
   - amd64
   - armv7
@@ -43,8 +45,8 @@ options:
       db_username: homeassistant
       db_host: 192.168.1.100
       db_port: "3306"
-      db_database: homeassistant
-      db_type: mariadb
+      db_database: home-assistant_v2.db
+      db_type: sqlite
   autotrain: true
   autotrain_cadence: "0 0 * * 0"
   startup_disable_all: false
@@ -54,10 +56,10 @@ schema:
   sensors_id:
     - str
   db_options:
-    - db_password: str
-      db_username: str
-      db_host: str
-      db_port: str
+    - db_password: str?
+      db_username: str?
+      db_host: str?
+      db_port: str?
       db_database: str
       db_type: str
   autotrain: bool

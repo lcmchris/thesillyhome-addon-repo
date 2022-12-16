@@ -5,7 +5,7 @@
     "7123:8123",
     "7357:4357"
   ],
-  "postStartCommand": "bash devcontainer_bootstrap",
+  "postStartCommand": "sudo -E bash devcontainer_bootstrap",
   "runArgs": [
     "-e",
     "GIT_EDITOR=code --wait",
@@ -18,8 +18,10 @@
     "timonwong.shellcheck",
     "esbenp.prettier-vscode"
   ],
-  "mounts": [
-    "type=volume,target=/var/lib/docker"
+  "mounts": [{
+    "type": "volume",
+    "target":"/var/lib/docker"
+  }
   ],
   "settings": {
     "terminal.integrated.profiles.linux": {
