@@ -10,12 +10,16 @@ ML simplified of Homeassistant.
 Step 1:
 Define your sensors and lights. This currently requires the entity IDs to be listed:
 
-- Set username password - This can be anything you like to identify your user.
 - Set sensors
 - Set lights
 
 Step 2:
-Define your DB. To have this work well, 90 purge_keep_days is recommended or even better remove auto_purge: false.
+Define your DB. Currently either the default sqlite, mariadb and postgres is supported.
+
+For Sqlite, just set the db_database to your sqlite db filename and db_type to `sqlite`. The other variables can be left blank.
+For mariadb and postgres, set the db config to your connection urls.
+
+To have this work well, 90 purge_keep_days is recommended or even better remove auto_purge: false.
 If your Rasphberry Pi is not happy, please use an external db.
 Checkout the recorder documentation https://www.home-assistant.io/integrations/recorder/ for setting this up.
 
