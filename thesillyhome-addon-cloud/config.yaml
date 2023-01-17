@@ -1,6 +1,6 @@
-name: thesillyhome addon dev
+name: thesillyhome addon cloud
 version: "0.0.1-alpha"
-slug: thesillyhome_dev
+slug: thesillyhome_cloud_test
 description: "thesillyhome add-on cloud"
 url: "https://github.com/lcmchris/thesillyhome-addon-repo"
 homeassistant_api: true
@@ -14,8 +14,7 @@ arch:
   - armv7
   - aarch64
 options:
-  api_key:
-    - ey.xxxx.xxxx
+  api_key: ey.xxxx.xxxx
   actuactors_id:
     - light.bathroom_lights
     - light.corridor_lights
@@ -31,11 +30,8 @@ options:
       db_port: "3306"
       db_database: homeassistant
       db_type: mariadb
-  autotrain: true
-  autotrain_cadence: "0 0 * * 0"
 schema:
-  api_key:
-    - str
+  api_key: str
   actuactors_id:
     - str
   db_options:
@@ -45,6 +41,4 @@ schema:
       db_port: str?
       db_database: str
       db_type: str
-  autotrain: bool
-  autotrain_cadence: str
 # image: "lcmchris1/{arch}-thesillyhome-addon-cloud"
