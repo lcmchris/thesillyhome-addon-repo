@@ -41,4 +41,4 @@ schema:
       db_port: str?
       db_database: str
       db_type: str
-# image: "lcmchris1/{arch}-thesillyhome-addon-cloud"
+image: "lcmchris1/thesillyhome-addon-cloud-{arch}"
