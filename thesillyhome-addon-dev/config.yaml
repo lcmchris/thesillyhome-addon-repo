@@ -47,4 +47,4 @@ schema:
   autotrain: bool
   autotrain_cadence: str
   startup_disable_all: bool
-image: "lcmchris1/{arch}-thesillyhome-dev"
+image: "Lightningpicture/{arch}-thesillyhome-dev"
