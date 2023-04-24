@@ -1,4 +1,4 @@
 # https://developers.home-assistant.io/docs/add-ons/repository#repository-configuration
 name: The silly home add-on repository
-url: "https://github.com/lcmchris/thesillyhome-addon-repo"
+url: "https://github.com/Lightningpicture/thesillyhome-addon-repo"
 maintainer: Christopher Lai <lcmchristopher@gmail.com>
