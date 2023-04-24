@@ -1,8 +1,8 @@
 name: thesillyhome addon dev
-version: "2.0.13-dev"
+version: "2.0.14-dev"
 slug: thesillyhome_dev
 description: "thesillyhome add-on dev"
-url: "https://github.com/lcmchris/thesillyhome-addon-repo"
+url: "https://github.com/Lightningpicture/thesillyhome-addon-repo"
 homeassistant_api: true
 init: false
 ports:
@@ -20,26 +20,8 @@ arch:
 options:
   actuactors_id:
     - light.bathroom_lights
-    - light.corridor_lights
-    - switch.livingroom_entrance_switch_right
-    - switch.livingroom_entrance_switch_center
-    - switch.livingroom_entrance_switch_left
-    - light.bedroom_sidetable_lamp
-    - light.bedroom_ceiling_light
   sensors_id:
-    - sensor.corridor_end_sensor_illuminance_lux
     - binary_sensor.corridor_end_sensor_occupancy
-    - sensor.corridor_entrance_sensor_illuminance_lux
-    - binary_sensor.corridor_entrance_sensor_occupancy
-    - sensor.livingroom_desk_sensor_illuminance_lux
-    - binary_sensor.livingroom_desk_sensor_occupancy
-    - sensor.bedroom_entrance_sensor_illuminance_lux
-    - binary_sensor.bedroom_entrance_sensor_occupancy
-    - sensor.bathroom_entrance_sensor_illuminance_lux
-    - binary_sensor.bathroom_entrance_sensor_occupancy
-    - binary_sensor.chris_phone_is_charging
-    - device_tracker.chris_phone
-    - weather.home
   db_options:
     - db_password: XXXXXXX
       db_username: homeassistant
